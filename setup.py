@@ -20,13 +20,13 @@ test_requirements = [
 ]
 
 setup(
-    name='static_api',
+    name='static-api',
     version='0.0.1',
     description="A tool for generating HTTP APIs off of static files.",
     long_description=readme + '\n\n' + history,
     author="D. Yu",
     author_email='dyu@fastmail.com',
-    url='https://github.com/darylyu/static_api',
+    url='https://github.com/darylyu/static-api',
     packages=[
         'static_api',
     ],
@@ -41,7 +41,7 @@ setup(
     install_requires=requirements,
     license="GNU General Public License v3",
     zip_safe=False,
-    keywords='static_api',
+    keywords='static-api',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
