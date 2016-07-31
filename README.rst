@@ -25,10 +25,63 @@ A tool for generating HTTP APIs off of static files.
 * Documentation: https://static-api.readthedocs.io.
 
 
-Features
---------
+Installing
+----------
 
-* TODO
+  .. code-block:: bash
+    $ pip install static-api
+
+
+Usage
+-----
+
+  .. code-block:: bash
+    $ static_api <dir>
+
+  This runs a Flask app. The URLs map to the .json files inside <dir>
+
+  Example:
+
+  .. code-block:: bash
+    # You have a directory named dummy_api and inside it
+    # is a directory named users.
+    $ ls -l dummy_api
+    total 1
+    drwxr-xr-x  12 dyu  staff   408 Jul 31 21:08 users
+
+    # Inside users/ are files named 1.json and 2.json
+    $ ls -l dummy_api/users
+    total 2
+    -rw-r--r--@ 1 dyu  staff   102 Jul 31 21:12 1.json
+    -rw-r--r--@ 1 dyu  staff   104 Jul 31 21:12 2.json
+
+  Let's display the contents of 1.json::
+
+    $ cat dummy_api/users/1.json
+
+  It's a simple multi-line JSON file.
+  .. code-block:: json
+    {
+      "username": "jdoe",
+      "first_name": "John",
+      "last_name": "Doe"
+    }
+
+  Now let's run static_api and serve responses based on  files inside dummy_api
+
+    .. code-block:: bash
+      $ static_api dummy_api
+      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+  If you visit http://127.0.0.1:5000/users/1/, it will return this response:
+
+    .. code-block:: json
+      {
+        "username": "jdoe",
+        "first_name": "John",
+        "last_name": "Doe"
+      }
+
 
 Credits
 ---------
