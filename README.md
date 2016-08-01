@@ -76,6 +76,5 @@ Credits
 -------
 
 This package was created with Audrey Roy Greenfeld's `cookiecutter` project and the `audreyr/cookiecutter-pypackage` project template.
-
-https://github.com/audreyr/cookiecutter
-https://github.com/audreyr/cookiecutter-pypackage
+* https://github.com/audreyr/cookiecutter
+* https://github.com/audreyr/cookiecutter-pypackage
