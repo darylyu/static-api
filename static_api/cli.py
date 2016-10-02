@@ -16,6 +16,16 @@ def open_data_file(file_path):
         return r
 
 
+@api.route('/favicon.ico')
+def get_favicon():
+    # This is a work-around. This function makes the error
+    # quietly go away.
+    #
+    # The error was a 500 error because the could
+    # would try to look for a file named favicon.ico.json
+    return jsonify(None)
+
+
 @api.route('/', defaults={'path': ''})
 @api.route('/<path:path>')
 def get_dir(path):
