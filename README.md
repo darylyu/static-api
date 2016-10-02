@@ -3,7 +3,10 @@ static-api
 
 A tool for generating HTTP APIs off of static files.
 
-* Free software: GNU General Public License v3
+
+License
+-------
+Free software: GNU General Public License v3
 
 
 Installing
