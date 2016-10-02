@@ -72,6 +72,15 @@ Usage
   ```
 
 
+  If you want to make a "list" endpoint like http://127.0.0.1:5000/users/, make sure you have a file named `users.json`.
+
+  ```
+  {
+    "error": false,
+    "data": ["john", "paul", "george", "ringo"]
+  }
+  ```
+
 Credits
 -------
 
