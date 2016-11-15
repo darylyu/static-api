@@ -21,10 +21,12 @@ Usage
 -----
 
   ```
-  $ static_api <dir>
+  $ static_api <dir> --port=<port_number>
   ```
 
-  This runs a Flask app. The URLs map to the .json files inside <dir>
+  This runs a Flask app. The URLs map to the .json files inside <dir>.
+
+  You can also specify a port with `--port`. If unset, it will use port 5000.
 
   Example:
 

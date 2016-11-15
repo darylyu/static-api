@@ -39,12 +39,20 @@ def get_dir(path):
 
 @click.command()
 @click.argument('static_path')
-def main(static_path):
+@click.option('--port', '-p')
+def main(static_path, port):
     """Console script for static_api"""
-    click.echo(static_path)
+    click.echo("serving static api in this directory: %s" % static_path)
+
+    if port:
+        api_port = int(port)
+    else:
+        api_port = 5000
+    click.echo("port == %s" % api_port)
+
     global FILE_PATH
     FILE_PATH = static_path
-    api.run(debug=True)
+    api.run(debug=True, port=api_port)
 
 
 if __name__ == "__main__":
