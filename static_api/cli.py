@@ -8,7 +8,8 @@ from flask_cors import CORS
 
 
 api = Flask(__name__)
-CORS(api)
+cors = CORS(api, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+
 FILE_PATH = '.'
 
 
@@ -43,7 +44,7 @@ def main(static_path):
     click.echo(static_path)
     global FILE_PATH
     FILE_PATH = static_path
-    api.run()
+    api.run(debug=True)
 
 
 if __name__ == "__main__":
