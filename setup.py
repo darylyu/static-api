@@ -22,7 +22,7 @@ test_requirements = [
 
 setup(
     name='static-api',
-    version='0.0.5',
+    version='0.0.6',
     description="A tool for generating HTTP APIs off of static files.",
     long_description=readme + '\n\n' + history,
     author="D. Yu",

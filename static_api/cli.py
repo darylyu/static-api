@@ -8,7 +8,7 @@ from flask_cors import CORS
 
 
 api = Flask(__name__)
-cors(api)
+CORS(api)
 FILE_PATH = '.'
 
 
