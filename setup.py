@@ -12,6 +12,7 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     'Click>=6.0',
     'Flask>=0.11.1',
+    'flask-cors>=3.0.2',
     # TODO: put package requirements here
 ]
 
