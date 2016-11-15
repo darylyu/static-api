@@ -4,10 +4,11 @@ import click
 import json
 
 from flask import Flask, jsonify
-from flask_cors import cross_origin
+from flask_cors import CORS
 
 
 api = Flask(__name__)
+cors(api)
 FILE_PATH = '.'
 
 
@@ -29,7 +30,6 @@ def get_favicon():
 
 @api.route('/', defaults={'path': ''})
 @api.route('/<path:path>')
-@cross_origin
 def get_dir(path):
     path = path.rstrip('/')
     r = open_data_file(FILE_PATH + '/' + path + '.json')
