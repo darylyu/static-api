@@ -7,7 +7,7 @@ tox==2.3.1
 coverage==4.1
 Sphinx==1.4.4
 
-Flask==0.11.1
+Flask==1.0
 flask-cors==3.0.2
 
 pytest==2.9.2
